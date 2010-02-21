@@ -1,10 +1,11 @@
 ActionController::Routing::Routes.draw do |map|
+  map.root :controller => 'root', :action => 'homepage'
   map.resources :users, :only => [:new, :create]
   map.resource :profile, :only => [:edit, :update]
+  map.resource :session, :only => [:new, :create, :destroy]
 
-  map.profile ':username', :controller => 'profile', :action => 'view'
+  map.contact ':user', :controller => 'contacts', :action => 'view'
 
-  map.root :controller => 'root', :action => 'homepage'
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

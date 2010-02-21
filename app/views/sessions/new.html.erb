@@ -1,0 +1,14 @@
+<% form_for :user, :url => session_path do |f| -%>
+  <p>
+    <%=f.label :username, "Username" -%>
+    <%=f.text_field :username %>
+  </p>
+  <p>
+    <%=f.label :password, "Password" -%>
+    <%=f.password_field :password -%>
+  </p>
+  <p>
+    <%=f.submit "Log-in"%>
+  </p>
+<%end -%>
+

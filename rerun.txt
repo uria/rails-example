@@ -1,1 +1,1 @@
-features/user_registration.feature:28
+features/profile_edition.feature:19

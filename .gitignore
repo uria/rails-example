@@ -1,0 +1,10 @@
+*~
+*#
+.#*
+log/*.log
+tmp/**/*
+tmp/*
+nbproject/*
+doc/api
+doc/app
+db/*.sqlite3
