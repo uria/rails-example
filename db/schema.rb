@@ -9,14 +9,38 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100218160506) do
+ActiveRecord::Schema.define(:version => 20100224173309) do
+
+  create_table "body_types", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "counties", :force => true do |t|
+    t.string "name"
+  end
+
+  create_table "genders", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "marital_statuses", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "profiles", :force => true do |t|
     t.integer  "user_id"
-    t.string   "city"
-    t.integer  "county_id"
+    t.integer  "marital_status_id"
     t.integer  "height"
+    t.integer  "body_type_id"
+    t.boolean  "smoker"
     t.text     "about_me"
+    t.text     "what_i_look_for"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -27,6 +51,11 @@ ActiveRecord::Schema.define(:version => 20100218160506) do
     t.string   "crypted_password",  :null => false
     t.string   "password_salt",     :null => false
     t.string   "persistence_token"
+    t.date     "birthdate",         :null => false
+    t.integer  "county_id",         :null => false
+    t.string   "city"
+    t.integer  "gender_id",         :null => false
+    t.integer  "looking_for_id",    :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

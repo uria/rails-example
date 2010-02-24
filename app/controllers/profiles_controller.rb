@@ -11,7 +11,7 @@ class ProfilesController < ApplicationController
     @profile = current_user.profile
     if @profile.update_attributes(params[:profile])
       flash[:notice] = "Profile updated."
-      redirect_to root_path
+      redirect_to contact_path(current_user.username)
     else
       render :edit
     end

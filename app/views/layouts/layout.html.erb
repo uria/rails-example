@@ -10,6 +10,7 @@
       <div id="user-menu">
 	<%if current_user%>
 	  <p>Welcome <%=current_user.username%></p>
+	  <%= link_to "Logout", session_path, :method => :delete -%>
 	  <%else%>
 	  <%= link_to "Register", new_user_path %>
       </div>

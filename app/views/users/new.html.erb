@@ -4,6 +4,11 @@
 		<%=f.input :email, :label => "Email Address"%>
 		<%=f.input :password%>
 		<%=f.input :password_confirmation%>
+		<%=f.input :birthdate, :start_year => Time.now.year-100, :end_year => Time.now.year-16 %>
+		<%=f.input :county %>
+		<%=f.input :city%>
+		<%=f.input :gender, :as => :radio, :label => "I am a" %>
+		<%=f.input :looking_for, :as => :radio, :label => "Looking for a" %>
 		<%=f.submit "Register"%>
 	<%end%>
 <%end -%>

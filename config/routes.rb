@@ -4,7 +4,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :profile, :only => [:edit, :update]
   map.resource :session, :only => [:new, :create, :destroy]
 
-  map.contact ':user', :controller => 'contacts', :action => 'view'
+  map.contact ':username', :controller => 'contacts', :action => 'view'
 
   # The priority is based upon order of creation: first created -> highest priority.
 
