@@ -1,9 +1,11 @@
 class User < ActiveRecord::Base
-  has_one :profile
   belongs_to :county
   belongs_to :gender
   belongs_to :looking_for, :class_name => "Gender"
-
+  has_one :profile
+  
+  has_many :photos
+  
   acts_as_authentic
   
   validates_presence_of :birthdate

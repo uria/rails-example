@@ -1,1 +1,1 @@
-features/profile_edition.feature:33
+features/photos_upload.feature:10

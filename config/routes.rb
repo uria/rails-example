@@ -3,6 +3,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users, :only => [:new, :create]
   map.resource :profile, :only => [:edit, :update]
   map.resource :session, :only => [:new, :create, :destroy]
+  map.resources :photos, :only => [:index, :new, :create, :destroy]
 
   map.contact ':username', :controller => 'contacts', :action => 'view'
 

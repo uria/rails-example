@@ -16,6 +16,8 @@ module NavigationHelpers
       edit_profile_path
     when /new user/
       new_user_path
+    when /photos/
+      photos_path
     when /(\/.*)/
       $1
     when /"(.*)" page/

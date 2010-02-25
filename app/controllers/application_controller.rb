@@ -21,4 +21,12 @@ class ApplicationController < ActionController::Base
     @current_user = current_user_session && current_user_session.user
   end
   
+  def logged_in_filter
+    unless current_user
+      flash[:error] = "Access denied."
+      redirect_to root_path 
+    end
+  end
+
+  
 end

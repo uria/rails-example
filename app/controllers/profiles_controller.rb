@@ -1,7 +1,7 @@
 class ProfilesController < ApplicationController
   layout 'layout'
   
-  before_filter :logged_in
+  before_filter :logged_in_filter
   
   def edit
     @profile = current_user.profile
@@ -14,15 +14,6 @@ class ProfilesController < ApplicationController
       redirect_to contact_path(current_user.username)
     else
       render :edit
-    end
-  end
-  
-  private
-  
-  def logged_in
-    unless current_user
-      flash[:error] = "Access denied."
-      redirect_to root_path 
     end
   end
 end
