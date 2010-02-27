@@ -1,0 +1,12 @@
+<% if @photos.size < 10 -%>
+  <%= link_to "Add new photo", new_photo_path %>
+<% end -%>
+
+<ul>
+<% @photos.each do |p| -%>
+  <li>
+    <%=image_tag p.photo.url, :class => 'thumbnail photo' %>
+  <%= link_to "delete", p, :method => :delete %>
+</li>
+<% end -%>
+</ul>

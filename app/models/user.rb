@@ -17,4 +17,8 @@ class User < ActiveRecord::Base
   def create_profile
     self.profile = Profile.new
   end
+  
+  def delete_photo(id)
+    self.photos.find(id).destroy
+  end
 end
