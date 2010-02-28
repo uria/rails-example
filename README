@@ -1,8 +1,8 @@
 Dating-website example
 ----------------------
 
-* Cucumber: see features/
-* RSpec: see spec/models/user_spec.rb (I haven't needed more rspec test yet, though I am going to add some controller specs to check some security issues.)
+* Cucumber
+* RSpec
 * Authlogic
 * Paperclip
 * Formtastic
